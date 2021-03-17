@@ -5,7 +5,9 @@ on:
     branches:
       - main
 env:
-  BASHFILE_ENV: sfproperties.sh
+  BASHFILE_ENV_DEV: sfproperties.sh
+  DIR_SYS_WIDE_LINUX: /etc/profile.d
+
 
 jobs:
   run-github-actions:
@@ -18,13 +20,12 @@ jobs:
           ls -l
       - name: Trigger bash shell
         run: |
-          sudo mv ${BASHFILE_ENV} /etc/profile.d/
-          cd /etc/profile.d/
-          chmod 777 $BASHFILE_ENV
-          source /etc/profile.d/$BASHFILE_ENV
+          sudo mv ${BASHFILE_ENV_DEV} ${DIR_SYS_WIDE_LINUX}
+          chmod 777 $DIR_SYS_WIDE_LINUX/$BASHFILE_ENV_DEV
+          source $DIR_SYS_WIDE_LINUX/$BASHFILE_ENV_DEV
           echo $PSQL_JDBC_URL
       - name: Access Variable Last Step 
         run: |
           ls -l /etc/profile.d/
-          source /etc/profile.d/$BASHFILE_ENV
+          source /etc/profile.d/$BASHFILE_ENV_DEV
           echo $PSQL_JDBC_URL
