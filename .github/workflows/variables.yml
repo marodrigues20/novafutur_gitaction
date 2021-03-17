@@ -19,5 +19,5 @@ jobs:
           echo $GITHUB_REPOSITORY
           echo $GITHUB_WORKSPACE
           echo $GITHUB_ENV
-          echo "${{ secrets.GITHUB_TOKEN }}"
+          echo "LET'S SEE THE SECRET: ${{ secrets.GITHUB_TOKEN }}"
 
