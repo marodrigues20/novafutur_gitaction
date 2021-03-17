@@ -19,11 +19,11 @@ jobs:
           pwd 
           ls -l
       - name: Decrypt file
-        run: gpg --quiet --batch --yes --decrypt --pass --passphrase="$PASSPHRASE" --output $HOME/sfproperties.sh system_var_dev_sf.txt.gpg
+        run: gpg --quiet --batch --yes --decrypt --pass --passphrase="samsung" --output $HOME/$BASHFILE_ENV_DEV system_var_dev_sf.txt.gpg
         env:
-          PASSPHRASE: ${{ secrets.PASSPHRASE}}
+          PASSPHRASE: ${{ secrets.PASSPHRASE }}
       - name: Print our files contents    
-        run: cat $HOME/sfproperties.sh
+        run: cat $HOME/$BASHFILE_ENV_DEV
       - name: Set up Linux Dev Env Variables
         run: |
           sudo mv ${BASHFILE_ENV_DEV} ${DIR_SYS_WIDE_LINUX}
