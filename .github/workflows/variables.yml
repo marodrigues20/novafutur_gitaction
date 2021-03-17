@@ -11,8 +11,14 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
       - name: Fetch code
+      - uses: actions/checkout@v1
         run: |
           pwd 
           ls -l
+      - name: Trigger bash shell
+        run: |
+          pwd
+          ls -l 
+          chmod 777 ${BASHFILE_ENV}
+          ./${BASHFILE_ENV}
