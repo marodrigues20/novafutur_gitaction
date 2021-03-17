@@ -18,4 +18,4 @@ jobs:
           ls -l
       - name: Trigger bash shell
         run: |
-          cat ${BASHFILE_ENV}
+          echo ${BASHFILE_ENV}
