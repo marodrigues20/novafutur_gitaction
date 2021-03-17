@@ -26,3 +26,4 @@ jobs:
           chmod 777 ${BASHFILE_ENV}
           ls -l
           ./${BASHFILE_ENV}
+          echo "Vamos ver url: $PSQL_JDBC_URL"
