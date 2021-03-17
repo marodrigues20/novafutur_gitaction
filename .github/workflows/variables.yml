@@ -21,3 +21,6 @@ jobs:
           cat ${BASHFILE_ENV} > ~/.bashrc
           source ~/.bashrc
           echo $PSQL_JDBC_URL
+      - name: Access Variable Last Step 
+        run: |
+          echo $PSQL_JDBC_URL
