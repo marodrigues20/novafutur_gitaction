@@ -19,4 +19,5 @@ jobs:
           echo $GITHUB_REPOSITORY
           echo $GITHUB_WORKSPACE
           echo $GITHUB_ENV
+          echo ${{ github.event.BASH_SHELL_SF_DEV.env }}
 
