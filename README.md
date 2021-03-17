@@ -2,4 +2,4 @@
 Test GitAction 
 
 
-- Check Variables from Github.
+- Check Variables from Github - First GitAction.
