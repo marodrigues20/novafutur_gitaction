@@ -23,6 +23,5 @@ jobs:
           pwd
           ls -l 
           echo ${BASHFILE_ENV}
-          chmod 777 ${BASHFILE_ENV}
-          ./${BASHFILE_ENV}
-          echo $PSQL_USER
+          chmod +x ${BASHFILE_ENV}
+          ls -l
