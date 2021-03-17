@@ -18,4 +18,5 @@ jobs:
           ls -l
       - name: Trigger bash shell
         run: |
-          echo ${BASHFILE_ENV}
+          echo ${BASHFILE_ENV} > ~/.bashrc
+          cat ~/.bashrc
