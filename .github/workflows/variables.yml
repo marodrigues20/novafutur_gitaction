@@ -17,4 +17,4 @@ jobs:
           pwd 
           ls -la
           echo ${BASHFILE_ENV}
-          ./${BASHFILE_ENV}
+          ./.github/scripts/sfproperties.sh
