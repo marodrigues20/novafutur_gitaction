@@ -21,6 +21,7 @@ jobs:
           cat ${BASHFILE_ENV}
           cat ${BASHFILE_ENV} > ~/.bashrc
           source ~/.bashrc
+          echo "Cheque aqui!!!!"
           cat ~/.bashrc
       - name: Trigger bash shell
         run: |
