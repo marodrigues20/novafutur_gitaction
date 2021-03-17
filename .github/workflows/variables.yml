@@ -5,7 +5,7 @@ on:
     branches:
       - main
 env:
-  BASHFILE_ENV: "sfproperties.sh"
+  BASHFILE_ENV: sfproperties.sh
 
 jobs:
   run-github-actions:
@@ -20,6 +20,7 @@ jobs:
         run: |
           pwd
           ls -l 
+          echo ${BASHFILE_ENV}
           chmod 777 ${BASHFILE_ENV}
           ./${BASHFILE_ENV}
           echo $PSQL_USER
