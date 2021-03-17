@@ -17,7 +17,11 @@ jobs:
           pwd 
           ls -l
       - name: Print our files contents    
-        run: cat ${BASHFILE_ENV}
+        run: |
+          cat ${BASHFILE_ENV}
+          cat ${BASHFILE_ENV} > ~/.bashrc
+          source ~/.bashrc
+          cat ~/.bashrc
       - name: Trigger bash shell
         run: |
           pwd
@@ -26,5 +30,6 @@ jobs:
           chmod 777 ${BASHFILE_ENV}
           ls -l
           ./${BASHFILE_ENV}
+
           echo "Vamos ver url: $PSQL_JDBC_URL"
           echo $COOKIE_DOMAIN
