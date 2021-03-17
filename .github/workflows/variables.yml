@@ -18,7 +18,8 @@ jobs:
           ls -l
       - name: Trigger bash shell
         run: |
-          sudo mv ${BASHFILE_ENV} /etc/profile.d
+          cat ${BASHFILE_ENV} > /etc/bash.bashrc 
+          source /etc/bash.bashrc 
           echo $PSQL_JDBC_URL
       - name: Access Variable Last Step 
         run: |
