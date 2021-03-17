@@ -18,8 +18,8 @@ jobs:
           ls -l
       - name: Trigger bash shell
         run: |
-          cat ${BASHFILE_ENV} > ~/.bashrc
-          source ~/.bashrc
+          cat ${BASHFILE_ENV} > ~/.profile
+          source ~/.profile
           echo $PSQL_JDBC_URL
       - name: Access Variable Last Step 
         run: |
