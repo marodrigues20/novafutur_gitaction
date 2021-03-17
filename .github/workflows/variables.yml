@@ -5,7 +5,7 @@ on:
     branches:
       - main
 env:
-  BASHFILE_ENV: "${{ secrets.BASH_SHELL_SF_DEV }}"
+  BASHFILE_ENV: "sfproperties.sh"
 
 jobs:
   run-github-actions:
@@ -15,11 +15,5 @@ jobs:
         run: echo ${{ github.event.client_payload.env }}
       - name: List Files
         run: |
-          pwd
-          ls -a
-          echo $GITHUB_SHA
-          echo $GITHUB_REPOSITORY
-          echo $GITHUB_WORKSPACE
-          echo $GITHUB_ENV
-          echo "${BASHFILE_ENV}"
+          ./${BASHFILE_ENV}
 
