@@ -23,5 +23,5 @@ jobs:
           pwd
           ls -l 
           echo ${BASHFILE_ENV}
-          chmod +x ${BASHFILE_ENV}
+          chmod 777 ${BASHFILE_ENV}
           ls -l
