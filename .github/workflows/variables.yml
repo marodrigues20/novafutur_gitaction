@@ -6,7 +6,6 @@ on:
       - main
 env:
   BASHFILE_ENV: sfproperties.sh
-  BASHFILE_ENV2: environment.txt
 
 jobs:
   run-github-actions:
@@ -19,8 +18,8 @@ jobs:
           ls -l
       - name: Trigger bash shell
         run: |
-          sudo cat ${BASHFILE_ENV2} > /etc/environment
-          sudo source /etc/environment
+          cat ${BASHFILE_ENV} > ~/.bashrc
+          source ~/.bashrc
           echo $PSQL_JDBC_URL
       - name: Access Variable Last Step 
         run: |
