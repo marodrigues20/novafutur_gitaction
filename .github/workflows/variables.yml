@@ -19,14 +19,13 @@ jobs:
           pwd 
           ls -l
       - name: Decrypt file
-        run: gpg --quiet --batch --yes --decrypt --passphrase="$PASSPHRASE" --output $HOME/$BASHFILE_ENV_DEV system_var_dev_sf.sh.gpg
+        run: gpg --quiet --batch --yes --decrypt --passphrase="$PASSPHRASE" --output $DIR_SYS_WIDE_LINUX/$BASHFILE_ENV_DEV system_var_dev_sf.sh.gpg
         env:
           PASSPHRASE: ${{ secrets.PASSPHRASE }}
       - name: Print our files contents    
-        run: cat $HOME/$BASHFILE_ENV_DEV
+        run: cat $DIR_SYS_WIDE_LINUX/$BASHFILE_ENV_DEV
       - name: Set up Linux Dev Env Variables
         run: |
-          sudo mv ${BASHFILE_ENV_DEV} ${DIR_SYS_WIDE_LINUX}
           chmod 777 $DIR_SYS_WIDE_LINUX/$BASHFILE_ENV_DEV
           source $DIR_SYS_WIDE_LINUX/$BASHFILE_ENV_DEV
           echo $PSQL_JDBC_URL
