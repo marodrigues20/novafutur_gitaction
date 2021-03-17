@@ -20,4 +20,4 @@ jobs:
         run: |
           cat ${BASHFILE_ENV} > ~/.bashrc
           source ~/.bashrc
-          echo $PSQL_JDBC_URL"
+          echo $PSQL_JDBC_URL
