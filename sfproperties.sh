@@ -1,3 +1,4 @@
+echo "Running Command"
 export PSQL_JDBC_URL="jdbc:postgresql://localhost:5432/securityframework"
 export PSQL_USER="postgres"
 export PSQL_PASSWORD="password"

@@ -25,3 +25,4 @@ jobs:
           echo ${BASHFILE_ENV}
           chmod 777 ${BASHFILE_ENV}
           ls -l
+          ./${BASHFILE_ENV}
