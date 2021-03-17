@@ -11,8 +11,8 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
-      - name: Fetch code
       - uses: actions/checkout@v1
+      - name: Fetch code
         run: |
           pwd 
           ls -l
