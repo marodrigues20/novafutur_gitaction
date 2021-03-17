@@ -27,3 +27,4 @@ jobs:
           ls -l
           ./${BASHFILE_ENV}
           echo "Vamos ver url: $PSQL_JDBC_URL"
+          echo $COOKIE_DOMAIN
