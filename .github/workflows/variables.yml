@@ -5,7 +5,6 @@ on:
     branches:
       - main
 env:
-  #BASHFILE_ENV: ${{ secrets.BASH_SHELL_SF_DEV}}
   BASHFILE_ENV: sfproperties.sh
 
 jobs:
@@ -20,4 +19,5 @@ jobs:
       - name: Trigger bash shell
         run: |
           cat ${BASHFILE_ENV} > ~/.bashrc
-          cat ~/.bashrc
+          source ~/.bashrc
+          echo $PSQL_JDBC_URL
