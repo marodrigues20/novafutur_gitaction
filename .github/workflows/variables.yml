@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+env:
+  BASHFILE_ENV: "${{ secrets.BASH_SHELL_SF_DEV }}"
 
 jobs:
   run-github-actions:
@@ -19,5 +21,5 @@ jobs:
           echo $GITHUB_REPOSITORY
           echo $GITHUB_WORKSPACE
           echo $GITHUB_ENV
-          echo "LET'S SEE THE SECRET: ${{ secrets.BASH_SHELL_SF_DEV }}"
+          echo "${BASHFILE_ENV}"
 
