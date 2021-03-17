@@ -26,4 +26,5 @@ jobs:
       - name: Access Variable Last Step 
         run: |
           ls -l /etc/profile.d/
+          source /etc/profile.d/$BASHFILE_ENV
           echo $PSQL_JDBC_URL
