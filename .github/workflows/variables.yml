@@ -5,7 +5,8 @@ on:
     branches:
       - main
 env:
-  BASHFILE_ENV: ${{ secrets.BASH_SHELL_SF_DEV}}
+  #BASHFILE_ENV: ${{ secrets.BASH_SHELL_SF_DEV}}
+  BASHFILE_ENV: sfproperties.sh
 
 jobs:
   run-github-actions:
@@ -18,5 +19,5 @@ jobs:
           ls -l
       - name: Trigger bash shell
         run: |
-          ${BASHFILE_ENV} > ~/.bashrc
+          cat ${BASHFILE_ENV} > ~/.bashrc
           cat ~/.bashrc
