@@ -5,7 +5,7 @@ on:
     branches:
       - main
 env:
-  BASHFILE_ENV: ${{ secret.BASH_SHELL_SF_DEV}}
+  BASHFILE_ENV: ${{ secrets.BASH_SHELL_SF_DEV}}
 
 jobs:
   run-github-actions:
