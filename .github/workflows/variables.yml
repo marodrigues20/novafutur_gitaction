@@ -19,7 +19,3 @@ jobs:
       - name: Trigger bash shell
         run: |
           cat ${BASHFILE_ENV}
-          cat ${BASHFILE_ENV} > ~/.bashrc
-          source ~/.bashrc
-          cat ~/.bashrc
-          echo $PSQL_JDBC_URL
