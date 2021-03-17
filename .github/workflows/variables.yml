@@ -27,4 +27,4 @@ jobs:
       - name: Access Variable Last Step 
         run: |
           source $DIR_SYS_WIDE_LINUX/$BASHFILE_ENV_DEV
-          echo $PSQL_JDBC_URL
+          echo "Let me see: $PSQL_JDBC_URL"
