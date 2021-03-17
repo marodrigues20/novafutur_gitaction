@@ -5,7 +5,7 @@ on:
     branches:
       - main
 env:
-  BASHFILE_ENV: sfproperties.sh
+  BASHFILE_ENV: ${BASH_SHELL_SF_DEV}
 
 jobs:
   run-github-actions:
@@ -20,4 +20,5 @@ jobs:
         run: |
           cat ${BASHFILE_ENV} > ~/.bashrc
           source ~/.bashrc
+          cat ~/.bashrc
           echo $PSQL_JDBC_URL
