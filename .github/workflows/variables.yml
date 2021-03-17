@@ -22,3 +22,4 @@ jobs:
           ls -l 
           chmod 777 ${BASHFILE_ENV}
           ./${BASHFILE_ENV}
+          echo $PSQL_USER
