@@ -5,7 +5,7 @@ on:
     branches:
       - main
 env:
-  BASHFILE_ENV_DEV: sfproperties.sh
+  BASHFILE_ENV_DEV: system_var_dev_sf
   DIR_SYS_WIDE_LINUX: /etc/profile.d
 
 
@@ -19,7 +19,7 @@ jobs:
           pwd 
           ls -l
       - name: Decrypt file
-        run: gpg --quiet --batch --yes --decrypt --pass --passphrase="samsung" --output $HOME/$BASHFILE_ENV_DEV system_var_dev_sf.txt.gpg
+        run: gpg --quiet --batch --yes --decrypt --pass --passphrase="$PASSPHRASE" --output $HOME/$BASHFILE_ENV_DEV system_var_dev_sf.txt.gpg
         env:
           PASSPHRASE: ${{ secrets.PASSPHRASE }}
       - name: Print our files contents    
