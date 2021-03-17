@@ -3,7 +3,7 @@ name: Bash File Test
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   run-github-actions:
