@@ -12,9 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: List Files
+      - name: Fetch code
         run: |
           pwd 
-          ls -la
-          echo ${BASHFILE_ENV}
-          ./.github/scripts/sfproperties.sh
+          ls -l
