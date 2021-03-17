@@ -26,7 +26,7 @@ jobs:
         run: cat $DIR_SYS_WIDE_LINUX/$BASHFILE_ENV_DEV
       - name: Set up Linux Dev Env Variables
         run: |
-          chmod 777 $DIR_SYS_WIDE_LINUX/$BASHFILE_ENV_DEV
+          sudo chmod 777 $DIR_SYS_WIDE_LINUX/$BASHFILE_ENV_DEV
           source $DIR_SYS_WIDE_LINUX/$BASHFILE_ENV_DEV
           echo $PSQL_JDBC_URL
       - name: Access Variable Last Step 
