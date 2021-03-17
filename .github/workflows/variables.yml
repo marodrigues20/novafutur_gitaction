@@ -16,6 +16,8 @@ jobs:
         run: |
           pwd 
           ls -l
+      - name: Print our files contents    
+        run: cat $HOME/${BASHFILE_ENV}
       - name: Trigger bash shell
         run: |
           pwd
