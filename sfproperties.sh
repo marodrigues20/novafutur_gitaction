@@ -1,23 +1,3 @@
 echo "Running Command"
 export PSQL_JDBC_URL="jdbc:postgresql://localhost:5432/securityframework"
-export PSQL_USER="postgres"
-export PSQL_PASSWORD="password"
-export GOOGLE_APPLICATION_CREDENTIALS="/Users/raffaelelatela/GOOGLE-CREDENTIAL/dev-security-260414-09c927f5a213.json"
-export GOOGLE_PROJECT_ID="dev-security-260414"
-export PSQL_SCHEMA="securityframework"
-export PSQL_DATASOURCE_INITIAL=5
-export PSQL_DATASOURCE_MAX=20
-export NTFYHUB_LOGIN_URL=https://notificationhub-dot-dev-267115.appspot.com/api/login
-export NTFYHUB_SEND_SMS_URL=https://notificationhub-dot-dev-267115.appspot.com/api/sms/process
-export NTFYHUB_SEND_EMAIL_URL=https://notificationhub-dot-dev-267115.appspot.com/api/email/process
-export NTFYHUB_USER_EMAIL=test@mail.com
-export NTFYHUB_USER_PASSWORD=test
-export NTFYHUB_TEMPLATE_SMS_OTP=5e7dd7e36ee0af41b41bae39
-export NTFYHUB_TEMPLATE_EMAIL_CHPASSWORD=5ebbc05a7631cf2bd454fb2e
-export NTFYHUB_TEMPLATE_EMAIL_INVITEORG=5ebbc12d7c3aa2786b33bc0b
-export NTFYHUB_TEMPLATE_EMAIL_INVITEUSR=5ebbc18790b7c84197752a82
-export FRONTEND_URL=https://accounts.dev.novafutur.com/
-export LOGIN_FORM_URL=https://welcome.dev.novafutur.com/
-export DEFAULT_ISSUER=https://auth.dev.novafutur.com/
-export GOOGLE_BUCKET=dev_auth-backend-api
 export COOKIE_DOMAIN=nova-auth
