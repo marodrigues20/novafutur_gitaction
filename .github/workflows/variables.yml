@@ -23,6 +23,7 @@ jobs:
           source ~/.bashrc
           echo "Cheque aqui!!!!"
           cat ~/.bashrc
+          echo "Vamos ver url: $PSQL_JDBC_URL"
       - name: Trigger bash shell
         run: |
           pwd
@@ -31,6 +32,5 @@ jobs:
           chmod 777 ${BASHFILE_ENV}
           ls -l
           ./${BASHFILE_ENV}
-
           echo "Vamos ver url: $PSQL_JDBC_URL"
           echo $COOKIE_DOMAIN
