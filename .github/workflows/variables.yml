@@ -20,7 +20,7 @@ jobs:
       - name: Trigger bash shell
         run: |
           sudo cat ${BASHFILE_ENV2} > /etc/environment
-          source /etc/environment
+          sudo source /etc/environment
           echo $PSQL_JDBC_URL
       - name: Access Variable Last Step 
         run: |
