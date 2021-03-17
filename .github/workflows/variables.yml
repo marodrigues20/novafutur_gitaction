@@ -19,7 +19,7 @@ jobs:
           pwd 
           ls -l
       - name: Decrypt file
-        run: gpg --quiet --batch --yes --decrypt --passphrase="$PASSPHRASE" --output $DIR_SYS_WIDE_LINUX/$BASHFILE_ENV_DEV system_var_dev_sf.sh.gpg
+        run: sudo gpg --quiet --batch --yes --decrypt --passphrase="$PASSPHRASE" --output $DIR_SYS_WIDE_LINUX/$BASHFILE_ENV_DEV system_var_dev_sf.sh.gpg
         env:
           PASSPHRASE: ${{ secrets.PASSPHRASE }}
       - name: Print our files contents    
