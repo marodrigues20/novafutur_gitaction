@@ -43,4 +43,8 @@ jobs:
           while read -r line; do echo "action_state=yellow" >> $GITHUB_ENV; done < ${HOME}/intermediate3.txt
           echo "**************************** CHECKING ENV  ********************"
           echo "${{ env.action_state }}"
+      - name: Use the value
+        id: step_two
+        run: |
+          echo "${{ env.action_state }}" # This will output 'yellow'
           
