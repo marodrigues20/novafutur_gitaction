@@ -36,9 +36,5 @@ jobs:
       - name: Generate a Intermediate File for $GITHUB_ENV
         run: |
           sudo sed 's/export //g' $DIR_SYS_WIDE_LINUX/$BASHFILE_ENV_DEV > ${HOME}/intermediate.txt
-          sudo sed 's/"//g' ${HOME}/intermediate.txt > ${HOME}/intermediate2.txt
-          cd ${HOME} 
-          echo "----------- xxxxxx -----------------"
-          echo ${HOME}/intermediate2.txt >> $GITHUB_ENV
-          echo "${{ env.PSQL_DATASOURCE_MAX }}"
+          while IFS= read -r line do echo "lets: $line" done < "${HOME}/intermediate.txt"
           
