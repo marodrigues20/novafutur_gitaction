@@ -39,3 +39,4 @@ jobs:
           sudo cp $DIR_SYS_WIDE_LINUX/$BASHFILE_ENV_DEV ${HOME}/intermediate.txt
           cd ${HOME} 
           sed s/\<export\>//g intermediate.txt
+          sed -e 's/^[ \t]*//' intermediate.txt
