@@ -37,7 +37,7 @@ jobs:
         run: |
           sudo sed 's/export //g' $DIR_SYS_WIDE_LINUX/$BASHFILE_ENV_DEV > ${HOME}/intermediate.txt
           sudo sed 's/"//g' ${HOME}/intermediate.txt > ${HOME}/intermediate2.txt
-          sudo sed 's/\'//g' ${HOME}/intermediate2.txt > ${HOME}/intermediate3.txt
+          sudo sed "s/'//g" ${HOME}/intermediate2.txt > ${HOME}/intermediate3.txt
           cd ${HOME} 
           cat ${HOME}/intermediate3.txt
       - name: Set the values Intermediate file into $GITHUB_ENV
