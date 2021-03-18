@@ -33,9 +33,12 @@ jobs:
         run: |
           source $DIR_SYS_WIDE_LINUX/$BASHFILE_ENV_DEV
           echo "Let me see: $PSQL_JDBC_URL"
-      - name: Set the value into $GITHUB_ENV
+      - name: Generate a Intermediate File for $GITHUB_ENV
         run: |
           sudo sed 's/export //g' $DIR_SYS_WIDE_LINUX/$BASHFILE_ENV_DEV > ${HOME}/intermediate.txt
           cd ${HOME} 
           cat ${HOME}/intermediate.txt
+      - name: Set the values Intermediate file into $GITHUB_ENV
+        run: |
+          cat ${HOME}/intermediate.txt >> ${GITHUB_ENV}
           
