@@ -33,3 +33,7 @@ jobs:
         run: |
           source $DIR_SYS_WIDE_LINUX/$BASHFILE_ENV_DEV
           echo "Let me see: $PSQL_JDBC_URL"
+      - name: Read  /etc/profile.d
+        run: |
+          cd $DIR_SYS_WIDE_LINUX
+          ls -l
