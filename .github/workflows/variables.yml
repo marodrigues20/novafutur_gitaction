@@ -45,4 +45,4 @@ jobs:
             cat $DIR_SYS_WIDE_LINUX/$BASHFILE_ENV_DEV >> $GITHUB_ENV
             cat $GITHUB_ENV
       - name: Access $GITHUB_ENV Variables
-        run: echo "LETS SEE WHAT HAS HERE --> $NTFYHUB_USER_EMAIL"
+        run: echo ${{ env.NTFYHUB_USER_EMAIL }}
