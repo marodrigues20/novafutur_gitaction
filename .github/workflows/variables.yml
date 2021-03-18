@@ -39,5 +39,5 @@ jobs:
           echo "**************************** START WHILE ********************"
           while read -r line; do echo "$line" >> $GITHUB_ENV; done < ${HOME}/intermediate.txt
           echo "**************************** CHECKING ENV  ********************"
-          echo "${{ env }}"
+          echo "${{ env.PSQL_DATASOURCE_INITIAL }}"
           
