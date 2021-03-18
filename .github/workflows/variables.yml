@@ -39,8 +39,5 @@ jobs:
           sudo sed 's/"//g' ${HOME}/intermediate.txt > ${HOME}/intermediate2.txt
           sudo sed "s/'//g" ${HOME}/intermediate2.txt > ${HOME}/intermediate3.txt
           cd ${HOME} 
+          echo "----------- xxxxxx -----------------"
           cat ${HOME}/intermediate3.txt
-      - name: Set the values Intermediate file into $GITHUB_ENV
-        run: |
-          cat ${HOME}/intermediate3.txt >> $GITHUB_ENV
-          echo "${{ env.NTFYHUB_USER_EMAIL }}"
