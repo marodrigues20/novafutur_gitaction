@@ -36,6 +36,6 @@ jobs:
       - name: Set the value into $GITHUB_ENV
         run: |
           cat $DIR_SYS_WIDE_LINUX/$BASHFILE_ENV_DEV
-          mv $DIR_SYS_WIDE_LINUX/$BASHFILE_ENV_DEV $HOME/intermediate.txt
+          sudo mv $DIR_SYS_WIDE_LINUX/$BASHFILE_ENV_DEV $HOME/intermediate.txt
           cd $HOME 
           $sed 's/export//g' intermediate.txt
