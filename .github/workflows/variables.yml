@@ -35,5 +35,7 @@ jobs:
           echo "Let me see: $PSQL_JDBC_URL"
       - name: Read  /etc/profile.d
         run: |
+          cat $GITHUB_ENV
           cd $DIR_SYS_WIDE_LINUX
-          ls -l
+          echo "-------------------------------------- ENV_VARS.SH ---------------------------------"
+          cat env_vars.sh
