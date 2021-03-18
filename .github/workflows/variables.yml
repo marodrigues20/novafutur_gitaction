@@ -41,4 +41,6 @@ jobs:
           sudo sed -e 's/^\|$/"/g' ${HOME}/intermediate3.txt > ${HOME}/intermediate4.txt
           cd ${HOME} 
           echo "----------- xxxxxx -----------------"
-          cat ${HOME}/intermediate4.txt
+          echo ${HOME}/intermediate4.txt >> $GITHUB_ENV
+          echo "${{ env.PSQL_DATASOURCE_MAX }}"
+          
