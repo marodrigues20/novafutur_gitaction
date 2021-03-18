@@ -45,3 +45,8 @@ jobs:
         run: |
           echo "${{ env.PSQL_JDBC_URL }}" 
           echo "${{ env.COOKIE_DOMAIN }}" 
+      - name: Use the value in another step
+        id: step_three
+        run: |
+          echo "${{ env.PSQL_JDBC_URL }}" 
+          echo "${{ env.COOKIE_DOMAIN }}"
