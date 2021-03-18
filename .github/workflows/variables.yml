@@ -34,4 +34,8 @@ jobs:
           source $DIR_SYS_WIDE_LINUX/$BASHFILE_ENV_DEV
           echo "Let me see: $PSQL_JDBC_URL"
       - name: Set the value into $GITHUB_ENV
-        run: cat $DIR_SYS_WIDE_LINUX/$BASHFILE_ENV_DEV
+        run: |
+          cat $DIR_SYS_WIDE_LINUX/$BASHFILE_ENV_DEV
+          mv $DIR_SYS_WIDE_LINUX/$BASHFILE_ENV_DEV $HOME/intermediate.txt
+          cd $HOME 
+          $sed 's/export//g' intermediate.txt
