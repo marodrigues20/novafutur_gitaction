@@ -36,9 +36,10 @@ jobs:
       - name: Generate a Intermediate File for $GITHUB_ENV
         run: |
           sudo sed 's/export //g' $DIR_SYS_WIDE_LINUX/$BASHFILE_ENV_DEV > ${HOME}/intermediate.txt
+          sudo sed 's/"//g' ${HOME}/intermediate.txt > ${HOME}/intermediate2.txt
           cd ${HOME} 
-          cat ${HOME}/intermediate.txt
+          cat ${HOME}/intermediate2.txt
       - name: Set the values Intermediate file into $GITHUB_ENV
         run: |
-          cat ${HOME}/intermediate.txt >> $GITHUB_ENV
+          cat ${HOME}/intermediate2.txt >> $GITHUB_ENV
           echo "${{ env.NTFYHUB_USER_EMAIL }}"
