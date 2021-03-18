@@ -44,4 +44,3 @@ jobs:
         id: step_two
         run: |
           echo "${{ env.PSQL_JDBC_URL }}" # This will output 'yellow'
-          
