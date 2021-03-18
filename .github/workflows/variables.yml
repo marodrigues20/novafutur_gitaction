@@ -33,15 +33,5 @@ jobs:
         run: |
           source $DIR_SYS_WIDE_LINUX/$BASHFILE_ENV_DEV
           echo "Let me see: $PSQL_JDBC_URL"
-      - name: Read  /etc/profile.d
-        run: |
-          cat $GITHUB_ENV
-          cd $DIR_SYS_WIDE_LINUX
-          echo "-------------------------------------- ENV_VARS.SH ---------------------------------"
-          cat env_vars.sh
-      - name: Set the value
-        id: step_one
-        run: |
-            cat $DIR_SYS_WIDE_LINUX/$BASHFILE_ENV_DEV
-      - name: Access $GITHUB_ENV Variables
-        run: echo ${{ env.NTFYHUB_USER_EMAIL }}
+      - name: Set the value into $GITHUB_ENV
+        run: cat $DIR_SYS_WIDE_LINUX/$BASHFILE_ENV_DEV
