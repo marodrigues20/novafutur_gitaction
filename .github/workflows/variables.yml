@@ -38,5 +38,5 @@ jobs:
           cat $DIR_SYS_WIDE_LINUX/$BASHFILE_ENV_DEV
           sudo cp $DIR_SYS_WIDE_LINUX/$BASHFILE_ENV_DEV ${HOME}/intermediate.txt
           cd ${HOME} 
-          sudo sed 's/^[export|s/]//g' intermediate.txt 
+          sudo sed 's/^(export|s/)//g' intermediate.txt 
           
