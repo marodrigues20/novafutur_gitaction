@@ -35,8 +35,7 @@ jobs:
           echo "Let me see: $PSQL_JDBC_URL"
       - name: Set the value into $GITHUB_ENV
         run: |
-          cat $DIR_SYS_WIDE_LINUX/$BASHFILE_ENV_DEV
-          sudo cp $DIR_SYS_WIDE_LINUX/$BASHFILE_ENV_DEV ${HOME}/intermediate.txt
+          sudo sed 's/export //g' $DIR_SYS_WIDE_LINUX/$BASHFILE_ENV_DEV > ${HOME}/intermediate.txt
           cd ${HOME} 
-          sudo sed 's/^(export|s/)//g' intermediate.txt 
+          cat ${HOME}/intermediate.txt
           
