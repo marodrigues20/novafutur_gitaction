@@ -40,7 +40,7 @@ jobs:
           sudo sed "s/'//g" ${HOME}/intermediate1.txt > ${HOME}/intermediate2.txt
           sudo sed -e 's/^\|$/"/g' ${HOME}/intermediate2.txt > ${HOME}/intermediate3.txt
           echo "**************************** START WHILE ********************"
-          while read -r line; do echo "action_state=I'm here!!!" >> $GITHUB_ENV; done < ${HOME}/intermediate3.txt
+          while read -r line; do echo "${line}" >> $GITHUB_ENV; done < ${HOME}/intermediate3.txt
       - name: Use the value
         id: step_two
         run: |
