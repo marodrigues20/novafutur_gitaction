@@ -37,9 +37,8 @@ jobs:
         run: |
           sudo sed 's/export //g' $DIR_SYS_WIDE_LINUX/$BASHFILE_ENV_DEV > ${HOME}/intermediate.txt
           sudo sed 's/"//g' ${HOME}/intermediate.txt > ${HOME}/intermediate2.txt
-          sudo sed "s/'//g" ${HOME}/intermediate2.txt > ${HOME}/intermediate3.txt
           cd ${HOME} 
           echo "----------- xxxxxx -----------------"
-          echo ${HOME}/intermediate3.txt >> $GITHUB_ENV
+          echo ${HOME}/intermediate2.txt >> $GITHUB_ENV
           echo "${{ env.PSQL_DATASOURCE_MAX }}"
           
