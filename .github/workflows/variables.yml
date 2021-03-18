@@ -36,8 +36,10 @@ jobs:
       - name: Generate a Intermediate File for $GITHUB_ENV
         run: |
           sudo sed 's/export //g' $DIR_SYS_WIDE_LINUX/$BASHFILE_ENV_DEV > ${HOME}/intermediate.txt
+          sudo sed "s/'//g" ${HOME}/intermediate2.txt > ${HOME}/intermediate3.txt
+          sudo sed -e 's/^\|$/"/g' ${HOME}/intermediate3.txt > ${HOME}/intermediate4.txt
           echo "**************************** START WHILE ********************"
-          while read -r line; do echo "$line"; done < ${HOME}/intermediate.txt
+          while read -r line; do echo "$line"; done < ${HOME}/intermediate4.txt
           echo "**************************** CHECKING ENV  ********************"
           echo "${{ env.PSQL_DATASOURCE_INITIAL }}"
           
