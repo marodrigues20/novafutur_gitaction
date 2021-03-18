@@ -44,4 +44,4 @@ jobs:
         id: step_two
         run: |
           echo "${{ env.PSQL_JDBC_URL }}" 
-          echo "${{ env.PSQL_JDBC_URL }}" 
+          echo "${{ env.COOKIE_DOMAIN }}" 
